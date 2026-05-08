@@ -215,8 +215,20 @@ export default function Dashboard() {
   return (
     <div className="h-screen w-screen bg-neutral-50 text-neutral-900 flex overflow-hidden font-sans selection:bg-[#FF385C]/20 animate-in fade-in duration-500">
       
+      {/* Skip Link for Accessibility */}
+      <a 
+        href="#main-chat-content" 
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-[#FF385C] focus:rounded-lg focus:shadow-lg focus:font-bold focus:border focus:border-rose-100"
+      >
+        Skip to main content
+      </a>
+
       {/* Left Chat Column */}
-      <div className={`flex flex-col h-full bg-white shadow-[10px_0_30px_rgba(0,0,0,0.02)] z-10 transition-all duration-500 ${selectedProposal ? 'w-[450px]' : 'w-full max-w-4xl mx-auto border-x border-gray-100'}`}>
+      <aside 
+        className={`flex flex-col h-full bg-white shadow-[10px_0_30px_rgba(0,0,0,0.02)] z-10 transition-all duration-500 ${selectedProposal ? 'w-[450px]' : 'w-full max-w-4xl mx-auto border-x border-gray-100'}`}
+        role="complementary"
+        aria-label="Chat Assistant"
+      >
         
         {/* Chat Header */}
         <header className="flex items-center justify-between px-6 py-5 border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-10">
@@ -234,7 +246,11 @@ export default function Dashboard() {
         </header>
 
         {/* Chat Messages */}
-        <main className="flex-1 overflow-y-auto px-4 py-8 space-y-8 pb-40">
+        <main 
+          className="flex-1 overflow-y-auto px-4 py-8 space-y-8 pb-40" 
+          id="main-chat-content"
+          role="main"
+        >
           {messages.map((msg, idx) => {
             const { text, proposal, suggestions } = parseMessage(msg.text);
             return (
@@ -326,7 +342,7 @@ export default function Dashboard() {
             </Button>
           </div>
         </footer>
-      </div>
+      </aside>
 
       {/* Right Details Panel */}
       {selectedProposal && (

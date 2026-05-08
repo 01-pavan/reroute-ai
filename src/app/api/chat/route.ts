@@ -1,18 +1,40 @@
 import { NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import spotsData from "../../../../data/hyderabad-spots.json";
+import { z } from "zod";
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || "");
 const SPOTS_REFERENCE_DATA = JSON.stringify(spotsData.map(s => ({ name: s.name, category: s.category, vibe: s.vibe })));
 
+// Request Schema for validation
+const chatRequestSchema = z.object({
+  history: z.array(z.object({
+    role: z.enum(["user", "model"]),
+    parts: z.array(z.object({
+      text: z.string()
+    }))
+  })).optional(),
+  message: z.string().min(1)
+});
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { history, message } = body;
+    
+    // Strict Input Validation
+    const validation = chatRequestSchema.safeParse(body);
+    if (!validation.success) {
+      return NextResponse.json({ 
+        error: "Invalid request payload", 
+        details: validation.error.format() 
+      }, { status: 400 });
+    }
+
+    const { history, message } = validation.data;
 
     if (!process.env.GOOGLE_API_KEY) {
       return NextResponse.json(
-        { error: "GOOGLE_API_KEY is not configured." },
+        { error: "Internal configuration error." },
         { status: 500 }
       );
     }
@@ -54,12 +76,12 @@ export async function POST(request: Request) {
     `;
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash-lite-001",
+      model: "gemini-1.5-flash-latest",
       systemInstruction,
     });
 
-    console.log("Chat API received history:", JSON.stringify(history, null, 2));
-    console.log("Chat API received message:", message);
+    // Sanitized logging (no history dumping)
+    console.log(`[Chat] Processing request for message length: ${message.length}`);
 
     // Start chat with existing history
     const chat = model.startChat({
