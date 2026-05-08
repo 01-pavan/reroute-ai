@@ -48,7 +48,8 @@ export function ItineraryDetailsPanel({ proposal, onClose }: Props) {
             style={{ border: 0 }} 
             loading="lazy" 
             allowFullScreen 
-            src={`https://maps.google.com/maps?q=${encodeURIComponent(proposal.title + ' ' + proposal.location)}&t=&z=12&ie=UTF8&iwloc=&output=embed`}
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(proposal.title + ', ' + proposal.location)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
+            title={`Map of ${proposal.title}`}
           ></iframe>
         </div>
 

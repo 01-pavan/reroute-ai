@@ -227,6 +227,7 @@ export default function Dashboard() {
           <button 
             onClick={() => { setIsChatActive(false); setMessages([]); setSelectedProposal(null); }}
             className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
+            aria-label="Close chat"
           >
             Close
           </button>
@@ -296,6 +297,7 @@ export default function Dashboard() {
                   key={i}
                   onClick={() => sendMessage(sug)}
                   className="px-4 py-2 rounded-full bg-white border border-gray-200 text-sm font-medium text-neutral-700 hover:border-rose-300 hover:bg-rose-50 hover:text-rose-700 transition-all shadow-sm whitespace-nowrap"
+                  aria-label={`Suggest: ${sug}`}
                 >
                   {sug}
                 </button>
@@ -311,12 +313,14 @@ export default function Dashboard() {
               className="flex-1 bg-transparent border-none outline-none text-neutral-900 placeholder:text-neutral-400 font-medium px-4 text-sm"
               placeholder={selectedProposal ? "E.g., It's raining, move us indoors..." : "Ask anything..."}
               onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
+              aria-label="Chat input"
             />
             <Button 
               onClick={sendMessage}
               size="icon"
               disabled={!query.trim() || isTyping}
               className="w-9 h-9 rounded-full bg-[#FF385C] hover:bg-[#E31C5F] text-white shrink-0 disabled:opacity-50 transition-colors"
+              aria-label="Send message"
             >
               <Send className="w-4 h-4 translate-x-[-1px] translate-y-[1px]" />
             </Button>

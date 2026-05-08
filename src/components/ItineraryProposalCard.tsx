@@ -1,5 +1,7 @@
 import { MapPin } from "lucide-react";
 import { Button } from "./ui/button";
+import Image from "next/image";
+import React, { useState } from "react";
 
 export interface ItineraryProposal {
   type: string;
@@ -24,20 +26,23 @@ interface Props {
   onOpen: (proposal: ItineraryProposal) => void;
 }
 
-export function ItineraryProposalCard({ proposal, onOpen }: Props) {
+export const ItineraryProposalCard = React.memo(({ proposal, onOpen }: Props) => {
   // Use a generic unsplash image for the location
   const imageUrl = `https://images.unsplash.com/photo-1599661559929-286663fcc949?w=600&q=80`;
+  const [imgSrc, setImgSrc] = useState(imageUrl);
 
   return (
     <div className="w-full max-w-sm rounded-2xl border border-gray-100 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-      <div className="h-40 w-full overflow-hidden bg-gray-100">
-        <img 
-          src={imageUrl} 
+      <div className="h-40 w-full overflow-hidden bg-gray-100 relative">
+        <Image 
+          src={imgSrc} 
           alt={proposal.location} 
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            e.currentTarget.src = "https://placehold.co/600x400/fecdd3/e11d48?text=Trip+Preview";
+          fill
+          className="object-cover"
+          onError={() => {
+            setImgSrc("https://placehold.co/600x400/fecdd3/e11d48?text=Trip+Preview");
           }}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <div className="p-4">
@@ -54,10 +59,13 @@ export function ItineraryProposalCard({ proposal, onOpen }: Props) {
         <Button 
           onClick={() => onOpen(proposal)}
           className="w-full bg-neutral-900 hover:bg-neutral-800 text-white rounded-xl py-5"
+          aria-label={`Open itinerary: ${proposal.title}`}
         >
           Open
         </Button>
       </div>
     </div>
   );
-}
+});
+
+ItineraryProposalCard.displayName = "ItineraryProposalCard";
