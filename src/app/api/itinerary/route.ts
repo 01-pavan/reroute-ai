@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     }
 
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-pro",
+      model: "gemini-flash-latest",
       systemInstruction: "You are an expert Hyderabad Travel Architect. Your goal is to take a list of local spots and a user's 'vibe' and return a strict JSON itinerary.",
       generationConfig: {
         responseMimeType: "application/json",
