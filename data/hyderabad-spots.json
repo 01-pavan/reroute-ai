@@ -1,0 +1,322 @@
+[
+  {
+    "id": "1",
+    "name": "Charminar",
+    "category": "History",
+    "coordinates": {
+      "lat": 17.3616,
+      "lng": 78.4747
+    },
+    "vibe": [
+      "Iconic",
+      "Bustling",
+      "Heritage"
+    ],
+    "description": "The center of old Hyderabad, a 16th-century mosque with four grand arches.",
+    "avg_duration": 90
+  },
+  {
+    "id": "2",
+    "name": "Golconda Fort",
+    "category": "History",
+    "coordinates": {
+      "lat": 17.3833,
+      "lng": 78.4011
+    },
+    "vibe": [
+      "Majestic",
+      "Acoustic",
+      "Sunset"
+    ],
+    "description": "Historic fortress known for its acoustics and diamond mines.",
+    "avg_duration": 180
+  },
+  {
+    "id": "3",
+    "name": "Hussain Sagar Lake",
+    "category": "Leisure",
+    "coordinates": {
+      "lat": 17.4239,
+      "lng": 78.4738
+    },
+    "vibe": [
+      "Serene",
+      "Evening Walk",
+      "Iconic"
+    ],
+    "description": "Large heart-shaped lake with a massive Buddha statue in the center.",
+    "avg_duration": 60
+  },
+  {
+    "id": "4",
+    "name": "Paradise Biryani (Secunderabad)",
+    "category": "Food",
+    "coordinates": {
+      "lat": 17.4435,
+      "lng": 78.4874
+    },
+    "vibe": [
+      "Authentic",
+      "Crowded",
+      "Culinary"
+    ],
+    "description": "The most famous spot for authentic Hyderabadi Biryani.",
+    "avg_duration": 60
+  },
+  {
+    "id": "5",
+    "name": "Birla Mandir",
+    "category": "History",
+    "coordinates": {
+      "lat": 17.4062,
+      "lng": 78.4691
+    },
+    "vibe": [
+      "Peaceful",
+      "Panoramic",
+      "White Marble"
+    ],
+    "description": "A stunning white marble temple on a hilltop with city views.",
+    "avg_duration": 60
+  },
+  {
+    "id": "6",
+    "name": "Ramoji Film City",
+    "category": "Leisure",
+    "coordinates": {
+      "lat": 17.2543,
+      "lng": 78.6808
+    },
+    "vibe": [
+      "Grand",
+      "Cinematic",
+      "Day Out"
+    ],
+    "description": "The world's largest film studio complex and amusement park.",
+    "avg_duration": 360
+  },
+  {
+    "id": "7",
+    "name": "Salar Jung Museum",
+    "category": "History",
+    "coordinates": {
+      "lat": 17.3713,
+      "lng": 78.4803
+    },
+    "vibe": [
+      "Artistic",
+      "Educational",
+      "Massive"
+    ],
+    "description": "One of the largest art collections in the world.",
+    "avg_duration": 180
+  },
+  {
+    "id": "8",
+    "name": "Chowmahalla Palace",
+    "category": "History",
+    "coordinates": {
+      "lat": 17.3578,
+      "lng": 78.4717
+    },
+    "vibe": [
+      "Royal",
+      "Elegant",
+      "Opulent"
+    ],
+    "description": "The seat of the Asaf Jahi dynasty, known for its grand courtyards.",
+    "avg_duration": 120
+  },
+  {
+    "id": "9",
+    "name": "Laad Bazaar",
+    "category": "Leisure",
+    "coordinates": {
+      "lat": 17.3615,
+      "lng": 78.4735
+    },
+    "vibe": [
+      "Colorful",
+      "Traditional",
+      "Shopping"
+    ],
+    "description": "Famous for bangles, located right next to Charminar.",
+    "avg_duration": 90
+  },
+  {
+    "id": "10",
+    "name": "Bawarchi Restaurant",
+    "category": "Food",
+    "coordinates": {
+      "lat": 17.4024,
+      "lng": 78.4895
+    },
+    "vibe": [
+      "Legendary",
+      "Spice",
+      "Must-Try"
+    ],
+    "description": "Often cited as the best Biryani by locals.",
+    "avg_duration": 60
+  },
+  {
+    "id": "11",
+    "name": "Shilparamam",
+    "category": "Leisure",
+    "coordinates": {
+      "lat": 17.4514,
+      "lng": 78.3773
+    },
+    "vibe": [
+      "Artistic",
+      "Cultural",
+      "Ethnic"
+    ],
+    "description": "Arts and crafts village showcasing Indian culture.",
+    "avg_duration": 120
+  },
+  {
+    "id": "12",
+    "name": "Inorbit Mall",
+    "category": "Leisure",
+    "coordinates": {
+      "lat": 17.4347,
+      "lng": 78.3866
+    },
+    "vibe": [
+      "Modern",
+      "Upscale",
+      "Lake View"
+    ],
+    "description": "Modern shopping destination with a great view of Durgam Cheruvu.",
+    "avg_duration": 120
+  },
+  {
+    "id": "13",
+    "name": "Durgam Cheruvu Cable Bridge",
+    "category": "Leisure",
+    "coordinates": {
+      "lat": 17.4339,
+      "lng": 78.3888
+    },
+    "vibe": [
+      "Stunning",
+      "Modern",
+      "Illuminated"
+    ],
+    "description": "A beautiful extradosed cable-stayed bridge, great for evening drives.",
+    "avg_duration": 45
+  },
+  {
+    "id": "14",
+    "name": "Nehru Zoological Park",
+    "category": "Leisure",
+    "coordinates": {
+      "lat": 17.3512,
+      "lng": 78.4482
+    },
+    "vibe": [
+      "Nature",
+      "Family",
+      "Sprawling"
+    ],
+    "description": "One of the most visited zoos in India.",
+    "avg_duration": 240
+  },
+  {
+    "id": "15",
+    "name": "Qutb Shahi Tombs",
+    "category": "History",
+    "coordinates": {
+      "lat": 17.3948,
+      "lng": 78.3975
+    },
+    "vibe": [
+      "Architectural",
+      "Quiet",
+      "Ancient"
+    ],
+    "description": "The burial ground of the seven Qutb Shahi kings.",
+    "avg_duration": 90
+  },
+  {
+    "id": "16",
+    "name": "Cafe Niloufer",
+    "category": "Food",
+    "coordinates": {
+      "lat": 17.4042,
+      "lng": 78.4552
+    },
+    "vibe": [
+      "Nostalgic",
+      "Irani Chai",
+      "Bakery"
+    ],
+    "description": "Famous for its Irani Chai and Osmania biscuits.",
+    "avg_duration": 45
+  },
+  {
+    "id": "17",
+    "name": "Taramati Baradari",
+    "category": "History",
+    "coordinates": {
+      "lat": 17.3755,
+      "lng": 78.3819
+    },
+    "vibe": [
+      "Romantic",
+      "Musical",
+      "Heritage"
+    ],
+    "description": "An ancient sarai built during the reign of Ibrahim Qutb Shah.",
+    "avg_duration": 60
+  },
+  {
+    "id": "18",
+    "name": "Lumbini Park",
+    "category": "Leisure",
+    "coordinates": {
+      "lat": 17.4103,
+      "lng": 78.4746
+    },
+    "vibe": [
+      "Fun",
+      "Laser Show",
+      "Waterfront"
+    ],
+    "description": "Popular public park next to Hussain Sagar Lake.",
+    "avg_duration": 90
+  },
+  {
+    "id": "19",
+    "name": "Gachibowli Stadium",
+    "category": "Leisure",
+    "coordinates": {
+      "lat": 17.4447,
+      "lng": 78.3475
+    },
+    "vibe": [
+      "Active",
+      "Sporty",
+      "Vast"
+    ],
+    "description": "A major sports complex in the IT corridor.",
+    "avg_duration": 120
+  },
+  {
+    "id": "20",
+    "name": "Nagarjuna Sagar Dam",
+    "category": "Leisure",
+    "coordinates": {
+      "lat": 16.5833,
+      "lng": 79.3167
+    },
+    "vibe": [
+      "Breathtaking",
+      "Power",
+      "Getaway"
+    ],
+    "description": "Technically a drive away, but a staple for Hyderabadi road trips.",
+    "avg_duration": 300
+  }
+]
